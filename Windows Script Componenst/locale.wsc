@@ -1,0 +1,50 @@
+<?XML version="1.0"?>
+<package>
+<?component error="true" debug="true"?>
+
+   <comment>
+   </comment>
+
+<component id="MyScriptlet">
+   <registration
+      progid="icrm.LocaleInfo"
+      description="description"
+      version="1.0"
+      clsid="{F2500BF4-FA86-4FA6-8499-4CE3E25DD349}"/>
+
+   <public>
+<!--       <property name="propertyname"/> -->
+      <method name="GetLangId">
+		 <parameter name="langname"/>
+	  </method>
+      <!-- <event name="eventname"/> -->
+   </public>
+
+   <script language="VBScript">
+      <![CDATA[
+      Function GetLangId(langname)
+		Stop
+		current = GetLocale()
+		SetLocale(langname)
+		GetLangId =GetLocale()
+		SetLocale(current)		
+      End Function
+      ]]>
+   </script>
+
+<!--    <script language="JScript">
+      <![CDATA[
+      function get_propertyname()
+      { // Script here.
+      }
+      function put_propertyname(newValue)
+      { // Script here.
+         fireEvent(eventname)
+      }
+      ]]>
+   </script> -->
+
+   <resource id="resourceID1">string or number here</resource>
+   <resource id="resourceID2">string or number here</resource>
+</component>
+</package>
