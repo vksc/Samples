@@ -1,0 +1,1 @@
+msiexec.exe /i %1 REINSTALLMODE=voums REINSTALL=ALL
