@@ -2,7 +2,7 @@
 //
 
 #include "stdafx.h"
-#include <foobar.h>
+#include "foobar.h"
 
 using namespace std;
 
